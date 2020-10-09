@@ -1,0 +1,67 @@
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #e0e0e0;
+}
+
+.header .information {
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    align-items: center;
+}
+
+.information-Menu {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.information-Youtube{
+    width: 6rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header nav .nav-rigth-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+nav .nav-rigth-section a {
+    margin-right: 10px;
+    color: #000000;
+}
+
+nav .nav-rigth-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    cursor:pointer;
+}
+
+nav .nav-rigth-section img {
+    border-radius: 50%;
+    margin-left: 1rem;
+    cursor:pointer;
+}

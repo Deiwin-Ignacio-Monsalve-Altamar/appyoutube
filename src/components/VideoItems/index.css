@@ -1,0 +1,31 @@
+.list {
+    border: 2px solid white;
+    height: 80%;
+}
+.list:hover {
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.list-container__video{
+    width: 40%;
+    height: 18%;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.list-container__video-description{
+    width: 60%;
+    height: 10rem;
+    margin: 0.5rem;
+}
+
+.list-container__video-description h4{
+    margin-bottom: 1rem;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.list-container__video-description p{
+    font-size: 80%;
+}

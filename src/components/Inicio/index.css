@@ -1,0 +1,60 @@
+.container-inicio{
+    height: auto;
+    width: 25%;
+}
+
+.videos-seleccionado{
+    margin-top: 1rem;
+    width: 90%;
+    height: 20rem;
+}
+
+.videos{
+    display: block;
+    text-align: center;
+    width: 85%;
+    height: 25%;
+    margin: 1rem;
+    margin-top: 0;
+    cursor:pointer;
+}
+
+
+.videos img{
+    width: 80%;
+    height: 80%;
+    margin: 0;
+}
+
+.videos h4{
+    margin: 0;
+    font-size: 0.5rem;
+    font-weight: bold; 
+}
+
+.videos-seleccionado h4{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.videos-seleccionado p{
+    font-size: 0.7rem;
+}
+.videos:hover {
+    border: 2px solid white;
+}
+
+.container-inicio__recommend{
+    margin-top: 1rem;
+    width: 90%;
+    height: 20rem;
+    overflow-y: scroll;
+}
+
+.container-inicio__news{
+    margin-top: 1rem;
+    width: 90%;
+    height: 20rem;
+    overflow-y: scroll;
+}
