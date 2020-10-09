@@ -1,8 +1,5 @@
 # CLONE YOUTUBE
 
-
-<img src="./imagesReadme/PrincipalClone.png" width="350"/>
-<img src="./imagesReadme/PrincipalClone.png" width="350"/>
 ## Description
 
 Project created for interview, with the different functionalities to fulfill:
@@ -17,6 +14,10 @@ b. Like and Dislike button on each item;
 -   3. Video detail page and mini bar: user should be able to navigate to the video detail
 page when the user touches on each item in the home page list; when the user slides
 the video view done to the bottom, a mini bar should be floating on the home page.
+
+
+<img src="./imagesReadme/PrincipalClone.png" width="350"/><img src="./imagesReadme/BusquedaenClone.png" width="350"/>
+
 
 
 ## Environment
