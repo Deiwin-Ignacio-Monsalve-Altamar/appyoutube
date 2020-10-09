@@ -36,6 +36,10 @@ Youtube Clone was built and tested in the Ubuntu 18.04 LTS  in React js trought 
 
 -   To bring all the congifurations and dependencies of the project to run in an excellent way
 
+ 
+### How does it work
+It is searched in the bar to watch and it is selected in turn it is played in the bar of the selected video
+
 ## Autor
 
 -   ***Deiwin Ignacio Monsalve Altamar - <https://github.com/Deiwin-Ignacio-Monsalve-Altamar>***
