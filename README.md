@@ -16,7 +16,8 @@ page when the user touches on each item in the home page list; when the user sli
 the video view done to the bottom, a mini bar should be floating on the home page.
 
 
-<img src="./imagesReadme/PrincipalClone.png" width="350"/><img src="./imagesReadme/BusquedaenClone.png" width="350"/>
+<img src="./imagesReadme/PrincipalClone.png" width="450"/><img src="./imagesReadme/search.png.png" width="450"/>
+
 
 
 
@@ -24,22 +25,41 @@ the video view done to the bottom, a mini bar should be floating on the home pag
 
 Youtube Clone was built and tested in the Ubuntu 18.04 LTS  in React js trought Bootstrap and compiled Babel
 
+
+## APIs
+
+-   YouTube Data API v3 of Google APis
+
 ## Instructions
 
-```npm start```
+Requires Node.JS 10
 
--   Runs the app in the development mode.<br />
--   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-```npm install```
-
--   To bring all the congifurations and dependencies of the project to run in an excellent way
-
+- `npm install` to install the dependencies.
+- `npm run dev` for the development environment.
+- `npm run build` for the production environment.
  
 ### How does it work
 It is searched in the bar to watch and it is selected in turn it is played in the bar of the selected video
 
+
+
+# IMPORTANT!
+
+- If when you start requesting these the api gets a message and the page stays this way
+
+<img src="./imagesReadme/problem.png" width="650"/>
+- ***Normally this happens because a 403 error message was generated, that is, the created credential expired so the api cannot be consumed, it is important to remember that to interact with the youtube api they give it a time limit and thus again create it again***
+
+- Answer
+
+
+- In the code enter the ```src/``` folder and in ```components/``` in the ```viwes/``` folder, change the key in the ```Home.js``` file and thus where the ```const Key``` variable is located, change the value
+<img src="./imagesReadme/answer.png" width="650"/>
+
+
+
+
 ## Autor
 
 -   ***Deiwin Ignacio Monsalve Altamar - <https://github.com/Deiwin-Ignacio-Monsalve-Altamar>***
+

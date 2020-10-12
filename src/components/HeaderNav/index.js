@@ -5,16 +5,17 @@ import './index.css';
 import PhotoEmail from '../../images/Photo.jpg';
 import Youtube from '../../images/youtube.png';
 import Menu from '../../images/menu tres lineas.png';
-import { a } from 'react-router-dom';
+
 
 class HeaderNav extends React.Component {
     render(){
         return (
         
         <div className="header">
+            {/*Add images and links in the header */}
             <div className="information">
                 <img className="information-Menu" src={Menu} alt="Menu three line"/>
-                <img className="information-Youtube" src={Youtube} alt="Logo Youtube"/>
+                <a href="https://youtube.com"><img className="information-Youtube" src={Youtube} alt="Logo Youtube"/></a>
             </div>     
             <nav>
                 <ul className="nav-rigth-section">
