@@ -15,9 +15,9 @@ b. Like and Dislike button on each item;
 page when the user touches on each item in the home page list; when the user slides
 the video view done to the bottom, a mini bar should be floating on the home page.
 
-<div style="display:flex; justify-content: center;">
+
 <img src="./imagesReadme/PrincipalClone.png" width="450"/><img src="./imagesReadme/search.png" width="450"/>
-</div>
+
 
 
 
