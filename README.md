@@ -16,7 +16,7 @@ page when the user touches on each item in the home page list; when the user sli
 the video view done to the bottom, a mini bar should be floating on the home page.
 
 
-<img src="./imagesReadme/PrincipalClone.png" width="450"/><img src="./imagesReadme/search.png.png" width="450"/>
+<img src="./imagesReadme/PrincipalClone.png" width="450"/><img src="./imagesReadme/search.png" width="450"/>
 
 
 
@@ -48,6 +48,8 @@ It is searched in the bar to watch and it is selected in turn it is played in th
 - If when you start requesting these the api gets a message and the page stays this way
 
 <img src="./imagesReadme/problem.png" width="650"/>
+
+
 - ***Normally this happens because a 403 error message was generated, that is, the created credential expired so the api cannot be consumed, it is important to remember that to interact with the youtube api they give it a time limit and thus again create it again***
 
 - Answer
