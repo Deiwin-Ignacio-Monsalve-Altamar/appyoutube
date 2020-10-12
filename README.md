@@ -16,7 +16,10 @@ page when the user touches on each item in the home page list; when the user sli
 the video view done to the bottom, a mini bar should be floating on the home page.
 
 
-<img src="./imagesReadme/PrincipalClone.png" width="450"/><img src="./imagesReadme/search.png" width="450"/>
+<img src="./imagesReadme/PrincipalClone.png" width="450"/>
+<br>
+
+<img src="./imagesReadme/search.png" width="450"/>
 
 
 
