@@ -1,12 +1,13 @@
 .container-inicio{
-    height: auto;
+    height: 80%;
     width: 25%;
+    margin: 2rem;
 }
 
 .videos-seleccionado{
     margin-top: 1rem;
     width: 90%;
-    height: 20rem;
+    height: auto;
 }
 
 .videos{
@@ -46,15 +47,24 @@
 }
 
 .container-inicio__recommend{
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 90%;
     height: 20rem;
     overflow-y: scroll;
 }
 
 .container-inicio__news{
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 90%;
     height: 20rem;
     overflow-y: scroll;
+}
+
+.Recomend{
+    margin-top: 2rem;
+}
+
+.News{
+    margin-top: 2rem;
+
 }

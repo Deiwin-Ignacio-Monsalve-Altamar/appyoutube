@@ -1,21 +1,27 @@
 import React from 'react';
 import $ from 'jquery';
 
+
+import ListLiks from '../ListLikes/index';
 import './index.css'
 
 
 
 
 function Inicio (props){
+
+    /*Create states for aplication of result API */
     const [key, setKey] = React.useState([]);
+    const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
         
-        const key = 'AIzaSyCxKpmkXAn1Ub3CkK0ALyUFCu4FRSKYjRg';
+        const key = props.Key;
         let playlistId = 'PL3ZIwoBDzQbfXabPNxq6QDmcEp-MCP_JL';
         const URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
-
         
+        
+        /*Minimum requirements requested by the api */
         let options = {
             part: 'snippet',
             key: key,
@@ -23,33 +29,40 @@ function Inicio (props){
             playlistId: playlistId,
         }
         return loadVideos();
-
+        
+        /* Performing a get with the permission to request video list */
         function loadVideos(){
             $.getJSON(URL, options, function(data){
                 /* let Photo = data.items[0].snippet.thumbnails.medium.url; */
                 setKey(data.items)
-    
-            }).fail(function(data){
+                setLoading(false)            
+            }).fail(function(error){
+                setLoading(true);
             })
         }
         
-    }, [])
-        return (
-            <div>
-                <h4>Recomend</h4>
+    }, [props.Key])
+    return (
+        <div>
+                <h4 className="Recomend">Recomend</h4>
+                {loading && <div> <p>Cargando....</p></div>}
+                {/* Print Recommended Video List*/}
                 <div className="container-inicio__recommend">
                         {key.map((value, i) =>(
-                    <div onClick={ () => props.handleVideoSelect(value)} className="videos" id="videoprincipal" key={i}>
+                        <div onClick={ () => props.handleVideoSelect(value)} className="videos" id="videoprincipal" key={i}>
+                        {/*When selecting the video it will be played */}
                         <img className="list-container__video" src={value.snippet.thumbnails.medium.url} alt="imagen"/>
                         <h4>{value.snippet.title}</h4>
                     </div>
                     ))}
                 </div>
 
-                <h4>News</h4>
+                <h4 className="News">News</h4>
+                {loading && <div> <p>Cargando....</p></div>}
+                {/* Print New Video List*/}
                 <div className="container-inicio__news">
                     {key.map((value, i) =>(
-                    <div onClick={ () => props.handleVideoSelect(value)} className="videos" id="videoprincipal" key={i}>
+                        <div onClick={ () => props.handleVideoSelect(value)} className="videos" id="videoprincipal" key={i}>
                         <img className="list-container__video" src={value.snippet.thumbnails.medium.url} alt="imagen"/>
                         <h4>{value.snippet.title}</h4>
                     </div>
@@ -59,15 +72,20 @@ function Inicio (props){
         )
     }
 
-class SubInicio extends React.Component {
-    render(){
-        let videoSrc, title , decriptions;
-        if(this.props.data.selectedVideo){
-            videoSrc = `https://www.youtube.com/embed/${this.props.data.selectedVideo.id.videoId}?rel=0&amp;autoplay=1`
-            title = this.props.data.selectedVideo.snippet.title;
-            decriptions = this.props.data.selectedVideo.snippet.description;
+/*Showing the selected videos and they play automatically */
+function SubInicio (props) {
+
+
+    let videoSrc, title, decriptions, videoId;
+    /*Decisions to know which video to play along with your data */
+        if(props.data.selectedVideo){
+            videoId = props.data.selectedVideo.id.videoId;
+            videoSrc = `https://www.youtube.com/embed/${videoId}?rel=0&amp;autoplay=1`
+            title = props.data.selectedVideo.snippet.title;
+            decriptions = props.data.selectedVideo.snippet.description;
         } else {
-            videoSrc='https://www.youtube.com/embed/ZaI2IlHwmgQ?rel=0&amp;autoplay=1'
+            videoId = 'ZaI2IlHwmgQ';
+            videoSrc=`https://www.youtube.com/embed/${videoId}?rel=0&amp;autoplay=1`
             title = 'The Black Eyed Peas - Pump It (Official Music Video)';
             decriptions = `REMASTERED IN HD!
             Music video by Black Eyed Peas performing Pump It. (C) 2006 A&M Records
@@ -75,18 +93,23 @@ class SubInicio extends React.Component {
         }
         return (
             <div className="row container-inicio d-flex justify-content-center">
+                {props.loading && <p>Cargando....</p>}
                 <div className="videos-seleccionado">
-                    <h4>Video Seleccionado</h4>
+                    <h4>Selected videos</h4>
                     <div className="videos-seleccionado" id="videoprincipal">
-                    <iframe width="300" height="155" iframe src={videoSrc} allowFullScreen title="Video player" />
+                    
+                    {/*Playing the selected video at the top*/}
+                    <iframe width="300" height="155" src={videoSrc} allowFullScreen title="Video player" />
                         <h4>{title}</h4>
+                        {/*Size containg of descriptions */}
                         <p>{decriptions.substring(0, 150)}</p>
+                        <ListLiks id={videoId}/>   
                     </div>
                     
                 </div>
-                <Inicio  handleVideoSelect={this.props.handleVideoSelect}/>
+                {/*Call the function for the videos recommend and news and display */}
+                <Inicio  handleVideoSelect={props.handleVideoSelect}/>
             </div>
         )
-    }
 }
 export default SubInicio;
